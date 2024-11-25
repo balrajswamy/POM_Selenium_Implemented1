@@ -50,6 +50,7 @@ class TestLogin:
         login_page.enter_into_email_address(invalid_email)
         login_page.enter_into_password(user_pwd)
         login_page.click_at_Login_button()
+        text_message = login_page.fetching_warning_message_expected_after_login()
         expected_warning_message = "Warning: No match for E-Mail Address and/or Password."
         assert login_page.fetching_warning_message_expected_after_login().__contains__(expected_warning_message)
 

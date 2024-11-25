@@ -6,6 +6,7 @@ class HomePage():
     search_button_xpath = '//button[contains(@class,"btn-default")]'
     my_account_drop_menu_xpath = '//span[text()="My Account"]'
     login_menu_link_text = 'Login'
+    register_menu_link_text = 'Register'
 
     def __init__(self, driver):
         self.driver = driver
@@ -22,3 +23,5 @@ class HomePage():
         self.driver.find_element(By.XPATH,self.my_account_drop_menu_xpath).click()
     def click_on_login_menu(self):
         self.driver.find_element(By.LINK_TEXT,self.login_menu_link_text).click()
+    def click_on_register_menu(self):
+        self.driver.find_element(By.LINK_TEXT,self.register_menu_link_text).click()
